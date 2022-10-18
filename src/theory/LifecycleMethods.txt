@@ -1,0 +1,65 @@
+1 Mounting 
+    1 constructor(props)
+        - A special function that will get called whenever a new component is created.
+        - Initializing state.
+        - Binding the event handlers.
+        - Do not cuase side effects. (http requests)
+        - super(props) directly overwrite this.state
+
+    2 static getDerivedStateFromProps(props, state)
+        - When the state of the component depends on changes in props over time.
+        - Set the state.
+        - Do not cause side effects. (http requests)
+
+    3 render() 
+        - Only required method.
+        - Read props, state and return JSX.
+        - Do not change state or interact with DOM or make ajax calls.
+        - Children components lifecycle methods are also executed.
+
+    4 componentDidMount()
+        - Invoked immediately after a component and all its children components have been renderd to the DOM.
+        - Cause side effects. (Interact with the DOM or perform any ajax calls to load data)
+
+2 Updating
+    1 static getDerivedStateFromProps(props, state)
+        - Method is called every time a component is re-rendered.
+        - Set the state.
+        - Do not cause side effects. (http requests)
+
+    2 shouldComponentUpdate(nextProps, nextState)
+        - Dictates if the component should re-rendred or not.
+        - Performance optimization.
+        - Do not cause side effect. (http requests, calling the setState method)
+    
+    3 render()
+        - Only required method.
+        - Read props, state and return JSX.
+        - Do not change state or interact with DOM or make ajax calls.
+    
+    4 getSnapshotBeforeUpdate(prevProps, prevState) 
+        - Called right before the changes from the virtual DOM are to be reflected in the DOM.
+        - Capture some information from the DOM.
+        - Method will either return null or return a value.
+        - Returned value will be passed as the third parameter to the next method.
+    
+    5 componentDidUpdate(prevProps, prevState, snapshot)
+        - Called after the render is finished in the re-rendred cycles.
+        - Cause side effects.
+
+3 Unmounting     
+    1 componentWillUnmount()
+        - This method allows us to execute the react code when the component gets destroyed or unmounted from the DOM.
+        - This method is called during the unmounting phase of the react life cycle.
+
+4 Error Handling
+    1 static getDerivedStateFromError(error)
+        - This method is invoked if some error occurs during the rendering phase of any lifecycle methods or any chhildren components.
+        - This method is used to implement the error boundaries for the react application.
+        - Is is called during the render phase so side effects are not permitted in this method.
+
+    2 componentDidCatch(error, info)
+        - This method is invoked if some error occurs during the rendering phase of any lifecycle methods or any children components.
+        - This method is used to implement the error boundaries for the react application. 
+        - Is is called during the commit phase so unlike getDerivedStateFromError which was called during the render phase so side effects are allowed in thid method.
+        - This method is used to log errors.
