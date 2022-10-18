@@ -3,6 +3,7 @@ import MountingLifecycle from './components/Lifecycle/MountingLifecycle';
 import UpdatingLifecycle from './components/Lifecycle/UpdatingLifecycle';
 import UnmountingLifecycle from './components/Lifecycle/UnmountingLifecycle';
 import PureComponent from './components/PureComponent';
+import ErrorHandlingLifecycle from './components/Lifecycle/ErrorHandlingLifecycle';
 
 const App = () => {
     return (
@@ -10,7 +11,8 @@ const App = () => {
             {/* <MountingLifecycle /> */}
             {/* <UpdatingLifecycle /> */}
             {/* <UnmountingLifecycle /> */}
-            <PureComponent />
+            <ErrorHandlingLifecycle />
+            {/* <PureComponent /> */}
         </div>
     )
 }
