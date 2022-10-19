@@ -1,13 +1,13 @@
 import React from 'react';
-import ClickCounter from './ClickCounter';
-import HoverCounter from './HoverCounter';
+import A from './A';
+import B from './B';
 
 const HOC = () => {
     return (
-        <>
-            <ClickCounter />
-            <HoverCounter />
-        </>
+        <div>
+            <A name={'A'} />
+            <B name={'B'} />
+        </div>
     )
 }
 

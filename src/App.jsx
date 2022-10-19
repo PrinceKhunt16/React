@@ -5,6 +5,7 @@ import UnmountingLifecycle from './components/Lifecycle/UnmountingLifecycle';
 import ErrorHandlingLifecycle from './components/Lifecycle/ErrorHandlingLifecycle';
 import PureComponent from './components/PureComponent';
 import HOC from './components/HigherOrderComponents';
+import RenderProps from './components/RenderProps';
 
 const App = () => {
     return (
@@ -14,7 +15,8 @@ const App = () => {
             {/* <UnmountingLifecycle /> */}
             {/* <ErrorHandlingLifecycle /> */}
             {/* <PureComponent /> */}
-            <HOC />
+            {/* <HOC /> */}
+            <RenderProps />
         </div>
     )
 }
