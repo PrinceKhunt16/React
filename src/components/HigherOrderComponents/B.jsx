@@ -1,5 +1,5 @@
 import React from 'react';
-import Counter from './Counter';
+import Counter from './withCounter';
 
 const B = (props) => {
     return (

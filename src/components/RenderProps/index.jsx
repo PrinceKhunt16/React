@@ -1,7 +1,7 @@
-import React from 'react'
-import Blog from './Blog'
-import Newsletter from './Newsletter'
-import Text from './Text'
+import React from 'react';
+import Blog from './Blog';
+import Newsletter from './Newsletter';
+import Text from './Text';
 
 const RenderProps = () => {
     return (
@@ -18,4 +18,4 @@ const RenderProps = () => {
     )
 }
 
-export default RenderProps
+export default RenderProps;

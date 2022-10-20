@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Counter = (WrapperComponent, num = 1) => {
+const withCounter = (WrapperComponent, num = 1) => {
     const InnerComponent = (props) => {
         const [count, setCount] = useState(0);
 
@@ -22,4 +22,4 @@ const Counter = (WrapperComponent, num = 1) => {
     return InnerComponent;
 }
 
-export default Counter;
+export default withCounter;

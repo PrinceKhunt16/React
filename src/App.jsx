@@ -6,6 +6,8 @@ import ErrorHandlingLifecycle from './components/Lifecycle/ErrorHandlingLifecycl
 import PureComponent from './components/PureComponent';
 import HOC from './components/HigherOrderComponents';
 import RenderProps from './components/RenderProps';
+import ContextModule from './components/ContextModule/userDetails';
+import { UserProvider } from './components/ContextModule/userContext';
 
 const App = () => {
     return (
@@ -16,7 +18,10 @@ const App = () => {
             {/* <ErrorHandlingLifecycle /> */}
             {/* <PureComponent /> */}
             {/* <HOC /> */}
-            <RenderProps />
+            {/* <RenderProps /> */}
+            <UserProvider>
+                <ContextModule />
+            </UserProvider>
         </div>
     )
 }
