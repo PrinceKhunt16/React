@@ -11,6 +11,8 @@ import ContextModule from './components/ContextModule/userDetails';
 import { UserProvider } from './components/ContextModule/userContext';
 import Compound from './components/CompoundComponents/Compound';
 import Toggle from './components/StateReducer/Toggle';
+import ControlledComponent from './components/ControlledComponent';
+import UncontrolledComponent from './components/UncontrolledComponent';
 
 const App = () => {
     return (
@@ -28,7 +30,9 @@ const App = () => {
                 </UserProvider> 
             */}
             {/* <Compound /> */}
-            <Toggle />
+            {/* <Toggle /> */}
+            {/* <ControlledComponent /> */}
+            <UncontrolledComponent />
         </div>
     )
 }
