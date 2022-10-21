@@ -10,6 +10,7 @@ import RenderProps from './components/RenderProps';
 import ContextModule from './components/ContextModule/userDetails';
 import { UserProvider } from './components/ContextModule/userContext';
 import Compound from './components/CompoundComponents/Compound';
+import Toggle from './components/StateReducer/Toggle';
 
 const App = () => {
     return (
@@ -21,10 +22,13 @@ const App = () => {
             {/* <PureComponent /> */}
             {/* <HOC /> */}
             {/* <RenderProps /> */}
-            {/* <UserProvider>
-                <ContextModule />
-            </UserProvider> */}
-            <Compound />
+            {/* 
+                <UserProvider>
+                    <ContextModule />
+                </UserProvider> 
+            */}
+            {/* <Compound /> */}
+            <Toggle />
         </div>
     )
 }
